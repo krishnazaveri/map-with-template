@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>map with template</title>
+</head>
+<body>
+    <div class="d"></div>
+    <script>
+
+        const details =[
+                {Name : "Krishna",Course : "React"},
+                {Name : "xyz",Course:"abc"}
+        ]
+
+        const data = details.map((v)=>{
+            //return v.Name + " " + v.Course;
+             var test = `
+             <h1>Registration</h1>
+             <table><tr>`
+
+
+                for(key in details)
+                {
+                    test +=`
+           <td>${key}</td>
+           ` 
+                }
+
+                test += `</tr>`
+             
+
+                test+=`</tr></table>`
+             
+        })
+
+        document.querySelector('.d').innerHTML=data;
+        //console.log(data)
+    </script>
+    
+</body>
+</html>
